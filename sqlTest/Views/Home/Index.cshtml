@@ -1,0 +1,63 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    @*<meta name="viewport" content="width=device-width" />*@
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <script src="~/Scripts/sqlTest.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <form>
+                    <h2>New Movie</h2>
+                    <label class="input-group">
+                        Title:
+                        <input id="title" type="text"/>
+                    </label>
+                    <label class="input-group">
+                        Director:
+                        <input id="director" type="text" />
+                    </label>
+                    <label class="input-group">
+                        Description:
+                        <textarea  id="description"></textarea>
+                    </label>
+                    <input type="button" value="Add Movie" class="btn btn-primary" id="submit"/>
+                </form>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>
+                                Title
+                            </th>
+                            <th>
+                                Director
+                            </th>
+                            <th colspan="2">
+                                Description
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="content">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
